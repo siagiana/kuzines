@@ -1,0 +1,159 @@
+@import "bootstrap/bootstrap.less";
+@import "bootstrap/responsive.less";
+
+@ciRed: #e64236;
+@ciAlmostWhite: #f2f2f2;
+
+body {
+	background: @ciAlmostWhite;
+}
+
+.navbar.navbar-fixed-top {
+	.logo {
+		width: 84.667px;
+		height: 36.667px;
+	}
+
+	.navbar-inner {
+		background: @ciRed;
+		border-bottom: 2px solid @ciAlmostWhite;
+		.box-shadow(none);
+	}
+
+	.brand {
+		color: #fff;
+		padding-top: 5px;
+		text-shadow: none;
+	}
+
+	.nav {
+		> li {
+			&.active {
+				> a {
+					background: @ciAlmostWhite;
+					.box-shadow(none);
+					color: @ciRed;
+					border-top: 5px solid #ddd;
+
+					&:hover {
+						background: @ciAlmostWhite;
+					}
+				}
+			}
+
+			> a {
+				color: #fff;
+				font-size: 26px;
+				font-weight: normal;
+				padding: 10px 20px 10px;
+				text-shadow: none;
+
+				&:hover {
+					background: lighten(@ciRed, 10%);
+				}
+			}
+		}
+	}
+
+	.btn-navbar {
+		background: @ciAlmostWhite;
+		border: none;
+
+		.icon-bar {
+			background: #ccc;
+			border: none;
+			.box-shadow(none);
+			height: 4px;
+
+			+ .iconbar {
+				margin-top: 4px;
+			}
+		}
+	}
+}
+
+.full-background {
+	background: #eee url(../img/background.jpg) 55% 4% no-repeat;
+	background-size: cover;
+	min-height: 400px;
+	color: #fff;
+}
+
+.full-page {
+	font-size: 26px;
+	line-height: 40px;
+	padding: 0 5%;
+
+	h1 {
+		padding-top: 40px;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: @ciRed;
+	font-weight: normal;
+}
+
+h2 {
+	margin-top: 30px;
+}
+
+#home-block {
+	padding: 2% 5%;
+	max-width: 360px;
+	text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.35);
+}
+
+#home {
+	h1, h2, h3 {
+		color: #fff;
+	}
+
+	h1 {
+		font-weight: 300;
+		font-size: 72px;
+		margin-bottom: 22px;
+	}
+
+	h2 {
+		font-weight: normal;
+	}
+}
+
+@media (max-width: @navbarCollapseWidth) {
+	.full-background {
+		margin: -20px -20px 0;
+	}
+}
+
+@media (min-width: @navbarCollapseDesktopWidth) {
+	.navbar.navbar-fixed-top {
+		.logo {
+			width: 127px;
+			height: 55px;
+		}
+
+		.brand {
+			padding-top: 10px;
+		}
+
+		.nav {
+			> li {
+				> a {
+					padding-top: 43px;
+					padding-bottom: 12px;
+				}
+
+				&.active {
+					> a {
+						padding-top: 38px;
+					}
+				}
+			}
+		}
+	}
+
+	.full-page {
+		padding-top: 77px;
+	}
+}
