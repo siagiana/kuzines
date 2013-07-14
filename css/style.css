@@ -9524,6 +9524,14 @@ h6 {
 h2 {
   margin-top: 30px;
 }
+footer {
+  font-size: 20px;
+  margin-top: -3em;
+}
+footer .copyright {
+  color: #999;
+  padding: 0 5%;
+}
 #home-block {
   padding: 2% 5%;
   max-width: 360px;
