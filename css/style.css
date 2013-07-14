@@ -9542,6 +9542,14 @@ h2 {
 #home h2 {
   font-weight: normal;
 }
+.gallery {
+  margin: 0;
+  padding: 0;
+}
+.gallery > li {
+  display: inline-block;
+  margin: 0 20px 20px 0;
+}
 @media (max-width: 767px) {
   .full-background {
     margin: -20px -20px 0;
